@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities{
+  .nav{
+      @apply relative ml-10
+       text-white cursor-pointer text-[14px]
+  }
+  .nav::after{
+      @apply content-[''] bg-white h-[3px]
+      w-[0%] left-0 -bottom-[5px] rounded-xl absolute duration-200
+  }
+  .nav:hover::after{
+      @apply w-[100%]
+  }
+  .navSelect{
+    @apply text-[15px] font-semibold ml-10 drop-shadow-sm
+  }
+  .tblHead{
+    @apply w-[300px] flex items-center text-primary text-sm md:text-lg font-semibold
+  }
+  .tblBody{
+    @apply w-full flex items-center text-black text-sm md:text-lg
+  }
+}
